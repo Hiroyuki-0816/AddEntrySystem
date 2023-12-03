@@ -25,7 +25,6 @@ public class AccessStart extends HttpServlet {
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		/* 職業マスタから職業名を取得する*/
-		
 		/*DAOオブジェクトを生成*/
 		JobDAO jdao = new JobDAO();
 		/*全件検索した結果をDTOオブジェクトとして取得*/
