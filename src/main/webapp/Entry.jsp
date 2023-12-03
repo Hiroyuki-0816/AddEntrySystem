@@ -4,7 +4,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% List<JobDTO> jlist = (List<JobDTO>)session.getAttribute("jlist"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +15,7 @@
 <body>
 <h1>登録画面</h1>
 
-<form method="post" action="/AddEntrySystem/Search01.jsp">
+<form method="post" action="/AddEntrySystem/Search.jsp">
 <div style="display:inline-flex">
 <input type="submit" value="登録" class="button">
 <input type="reset" value="クリア" onclick="clearButtonClickR()" class="button">
@@ -56,16 +55,6 @@
 <c:forEach var="tmp" items="${jlist}">
 <option><c:out value="${tmp.job}" /></option>
 </c:forEach>
-<!--  <option value="" id = "job"></option> -->
-<!--  <option value="01">会社員</option> -->
-<!--  <option value="02">公務員</option> -->
-<!--  <option value="03">自営業</option> -->
-<!--  <option value="04">個人事業主</option> -->
-<!--  <option value="05">経営者・会社役員</option> -->
-<!--  <option value="06">パート・アルバイト</option> -->
-<!--  <option value="07">専業主婦・主夫</option> -->
-<!--  <option value="08">学生</option> -->
-<!--  <option value="09">その他</option> -->
 </select>
 </td>
 </tr>

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="job.JobDTO" %>
+<%@ page import="job.*" %>
+<jsp:useBean id = "jdto" scope="request" class="job.JobDTO" />
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% List<JobDTO> jlist = (List<JobDTO>)session.getAttribute("jlist"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,7 @@
 <h1>住所登録システム</h1>
 
 <div style="display:inline-flex">
-<form method="get" action="http://localhost:8080/AddEntrySystem//Search01.jsp">
+<form method="get" action="http://localhost:8080/AddEntrySystem//Search.jsp">
 <input type="submit" value="検索"  class="button">
 </form>
 
@@ -25,11 +25,11 @@
 <input type="reset" value="クリア" onclick="clearButtonClickS()" class="button">
 </form>
 
-<form method="post" action="http://localhost:8080/AddEntrySystem/register-result.jsp">
+<form method="post" action="http://localhost:8080/AddEntrySystem/Entry.jsp">
 <input type="submit" value="新規" class="button">
 </form>
 
-<form method="get" action="http://localhost:8080/AddEntrySystem/register-result.jsp">
+<form method="get" action="http://localhost:8080/AddEntrySystem/Entry.jsp">
 <input type="submit" value="変更" class="button" >
 </form>
 
@@ -79,22 +79,12 @@
 <th><label for="job">職業</label></th>
 <td>
 <select name="job" class="form-controll">
-<!-- <!-- 以下は仮で作成した選択項目 -->
-<!--  <option id="job" value="" selected></option> -->
-<!--  <option value="01">会社員</option> -->
-<!--  <option value="02">公務員</option> -->
-<!--  <option value="03">自営業</option> -->
-<!--  <option value="04">個人事業主</option> -->
-<!--  <option value="05">経営者・会社役員</option> -->
-<!--  <option value="06">パート・アルバイト</option> -->
-<!--  <option value="07">専業主婦・主夫</option> -->
-<!--  <option value="08">学生</option> -->
-<!--  <option value="09">その他</option> --> 
-
-<c:forEach var="tmp" items="${jlist}">
-<option value="${tmp.id}"><c:out value="${tmp.job}" /></option>
-</c:forEach>
-
+<%
+	for(int i=0; i < jdto.size(); i++){
+		JobBean jb = jdto.get(i);
+%>
+	<option value=<%= jb.getId() %>><%= jb.getJob() %></option>
+<% } %>
 </select>
 </td>
 <th><label for ="address-detail">番地</label></th>

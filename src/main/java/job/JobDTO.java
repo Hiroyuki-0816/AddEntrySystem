@@ -1,26 +1,33 @@
 package job;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /*職業マスタの内容を保持するクラス*/
 
 public class JobDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
-	private String job;
+	/*JobBeanクラスのオブジェクトが格納されている*/
+	private ArrayList<JobBean> jlist; 
 	
-	//コンストラクタ
-    public JobDTO(){
-    	
-    }
-
-	/*jobの内容を取得する*/
-	public String getJob() {
-		return job;
+	/*ArrayListを新規作成*/
+	public JobDTO() {
+		jlist = new ArrayList<JobBean>();
 	}
 	
-	/*jobを設定する*/
-	public void setJob(String job) {
-		this.job = job;
+	/*ArrayListにオブジェクトを格納する*/
+	public void add(JobBean jb) {
+		jlist.add(jb);
+	}
+	
+	/*ArrayListに対してgetメソッドを取得*/
+	public JobBean get(int i) {
+		return jlist.get(i);
+	}
+	
+	/*ArrayListに対してデータの個数を格納*/
+	public int size() {
+		return jlist.size();
 	}
 }
 

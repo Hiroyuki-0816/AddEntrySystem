@@ -27,7 +27,7 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("/Search01.jsp").append(request.getContextPath());
+		response.getWriter().append("/Search.jsp").append(request.getContextPath());
 	}
 	
 	/**
@@ -35,7 +35,7 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("/Search01.jsp").append(request.getContextPath());
+		response.getWriter().append("/Search.jsp").append(request.getContextPath());
 	}
 
 }

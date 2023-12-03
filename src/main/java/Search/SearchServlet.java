@@ -27,7 +27,7 @@ public class SearchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/register-result.jsp").forward(request, response);
+		request.getRequestDispatcher("/Entry.jsp").forward(request, response);
 	}
 	
 	/**
@@ -35,7 +35,7 @@ public class SearchServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.getRequestDispatcher("/register-result.jsp").forward(request, response);
+		request.getRequestDispatcher("/Entry.jsp").forward(request, response);
 	}
 
 }
