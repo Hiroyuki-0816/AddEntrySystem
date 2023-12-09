@@ -23,7 +23,3 @@ function clearButtonClickS(){
         document.getElementById("address").value = "";
         document.getElementById("address-detail").value = "";
 }
-
-function closeWindow() {
-  window.open('about:_blank','_self').close();
-}

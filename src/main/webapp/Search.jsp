@@ -25,11 +25,11 @@
 <input type="reset" value="クリア" onclick="clearButtonClickS()" class="button">
 </form>
 
-<form method="post" action="http://localhost:8080/AddEntrySystem/Entry.jsp">
+<form method="post" action="/AddEntrySystem/Entry.jsp">
 <input type="submit" value="新規" class="button">
 </form>
 
-<form method="get" action="http://localhost:8080/AddEntrySystem/Entry.jsp">
+<form method="get" action="/AddEntrySystem/Entry.jsp">
 <input type="submit" value="変更" class="button" >
 </form>
 
@@ -37,8 +37,8 @@
 <input type="submit" value="削除" class="button">
 </form>
 
-<form>
-<input type="button" value="終了" onclick = "closeWindow()" class="button">
+<form method="post" action="/AddEntrySystem/Access.jsp">
+<input type="submit" value="終了" class="button">
 </form>
 </div>
 

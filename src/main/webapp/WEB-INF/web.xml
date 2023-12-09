@@ -11,13 +11,12 @@
   </welcome-file-list>
   
   <servlet>
-  <servlet-name>StartUpServletMapping</servlet-name>
-  <servlet-class>startUp.StartUpServlet</servlet-class>
+  <servlet-name>SearchServlet</servlet-name>
+  <servlet-class>Search.SearchServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  <servlet-name>StartUpServletMapping</servlet-name>
-  <url-pattern>/Search01</url-pattern>
+  <servlet-name>SearchServlet</servlet-name>
+  <url-pattern>/Search</url-pattern>
   </servlet-mapping>
   
 </web-app>

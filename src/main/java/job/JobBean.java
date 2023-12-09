@@ -1,5 +1,4 @@
 package job;
-
 import java.io.Serializable;
 
 /*検索結果を取得するためのBeanクラス*/

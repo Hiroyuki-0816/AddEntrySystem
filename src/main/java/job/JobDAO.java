@@ -8,11 +8,11 @@ import java.sql.Statement;
 	//職業マスタの一覧を取得するためのクラス
 	public class JobDAO{
 		/*データベースのURL*/
-		private final String url = "jdbc:mysql://localhost:3306/t_address";
+		private final String url = "jdbc:mysql://localhost:3306/AddEntryDB";
 		/*DBにアクセスするユーザ*/
 		private final String user = "root";
 		/*パスワード*/
-		private final String pass = "F4akyz3C";
+		private final String pass = "password";
 		/*DBから職業を取得するSQL文*/
 		private final String sql = "select * from t_address.m_job;";
 		/*接続先情報*/
@@ -50,8 +50,7 @@ import java.sql.Statement;
 					JobBean jb = new JobBean();
 					jb.setId(rs.getInt("id"));
 					jb.setJob(rs.getString("job"));
-					jdto.add(jb);
-				}
+					jdto.add(jb);				}
 			}catch(Exception e) {
 				e.printStackTrace();
 			}finally {
