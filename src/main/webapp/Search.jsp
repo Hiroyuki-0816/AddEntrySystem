@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="job.*" %>
+<%@ page import="Bean.*" %>
 <jsp:useBean id = "jdto" scope="request" class="job.JobDTO" />
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,11 +26,11 @@
 <input type="reset" value="クリア" onclick="clearButtonClickS()" class="button">
 </form>
 
-<form method="post" action="/AddEntrySystem/Entry.jsp">
+<form method="post" action="/AddEntrySystem/Entry">
 <input type="submit" value="新規" class="button">
 </form>
 
-<form method="get" action="/AddEntrySystem/Entry.jsp">
+<form method="post" action="/AddEntrySystem/Entry">
 <input type="submit" value="変更" class="button" >
 </form>
 
@@ -37,7 +38,7 @@
 <input type="submit" value="削除" class="button">
 </form>
 
-<form method="post" action="/AddEntrySystem/Access.jsp">
+<form method="post" action="/AddEntrySystem/End">
 <input type="submit" value="終了" class="button">
 </form>
 </div>

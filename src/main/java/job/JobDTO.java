@@ -3,6 +3,8 @@ package job;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import Bean.JobBean;
+
 /*職業マスタの内容を保持するクラス*/
 
 public class JobDTO implements Serializable{

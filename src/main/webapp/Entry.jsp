@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="job.JobDTO" %>
+<%@ page import="job.*" %>
+<%@ page import="Bean.*" %>
+<jsp:useBean id = "jdto" scope="request" class="job.JobDTO" />
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,11 +17,12 @@
 <body>
 <h1>登録画面</h1>
 
-<form method="post" action="/AddEntrySystem/Search.jsp">
 <div style="display:inline-flex">
 <input type="submit" value="登録" class="button">
 <input type="reset" value="クリア" onclick="clearButtonClickR()" class="button">
+<form method="post" action="/AddEntrySystem/Search">
 <input type="submit" value="中止" class="button">
+</form>
 </div>
 
  <p id="errormsg" style="color: red;"></p>
@@ -51,10 +54,13 @@
 <tr>
 <th><label for="job">職業</label></th>
 <td>
-<select name="job">
-<c:forEach var="tmp" items="${jlist}">
-<option><c:out value="${tmp.job}" /></option>
-</c:forEach>
+<select name="job" class="form-controll">
+<%
+	for(int i=0; i < jdto.size(); i++){
+		JobBean jb = jdto.get(i);
+%>
+	<option value=<%= jb.getId() %>><%= jb.getJob() %></option>
+<% } %>
 </select>
 </td>
 </tr>
@@ -79,7 +85,6 @@
 <td><input id = "address-detail" type="text" name="address-detail" size="20"></td>
 </tr>
 </table>
-</form>
 
 </body>
 </html>

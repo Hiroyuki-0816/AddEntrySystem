@@ -1,4 +1,4 @@
-package job;
+package Bean;
 import java.io.Serializable;
 
 /*検索結果を取得するためのBeanクラス*/
@@ -10,6 +10,11 @@ public class JobBean implements Serializable{
 	
 	/*職業名*/
 	private String job;
+	
+	/*コンストラクタ*/
+	public JobBean() {
+		
+	}
 	
 	public int getId() {
 		return id;

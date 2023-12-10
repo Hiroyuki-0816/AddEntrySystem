@@ -8,14 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import job.JobDAO;
-import job.JobDTO;
+import job.*;
 
 /**
  * Servlet implementation class SearchServlet
  */
 @WebServlet("/AddEntrySystem/Search")
-public class SearchServlet extends HttpServlet {
+public class AccessServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	/**

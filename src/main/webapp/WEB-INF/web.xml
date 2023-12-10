@@ -10,13 +10,35 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   
+  <!-- START -->
   <servlet>
-  <servlet-name>SearchServlet</servlet-name>
-  <servlet-class>Search.SearchServlet</servlet-class>
+    <servlet-name>access</servlet-name>
+    <servlet-class>Search.AccessServlet</servlet-class>
   </servlet>
+
   <servlet-mapping>
-  <servlet-name>SearchServlet</servlet-name>
-  <url-pattern>/Search</url-pattern>
+    <servlet-name>access</servlet-name>
+    <url-pattern>/Search</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>entry</servlet-name>
+    <servlet-class>Search.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>entry</servlet-name>
+    <url-pattern>/Entry</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>end</servlet-name>
+    <servlet-class>Search.EndServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>end</servlet-name>
+    <url-pattern>/End</url-pattern>
   </servlet-mapping>
   
 </web-app>
