@@ -18,7 +18,7 @@
 <h1>住所登録システム</h1>
 
 <div style="display:inline-flex">
-<form method="get" action="http://localhost:8080/AddEntrySystem//Search.jsp">
+<form method="get" action="http://localhost:8080/AddEntrySystem/Search.jsp">
 <input type="submit" value="検索"  class="button">
 </form>
 
