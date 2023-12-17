@@ -12,17 +12,27 @@
   
   <servlet>
     <servlet-name>access</servlet-name>
-    <servlet-class>Search.AccessServlet</servlet-class>
+    <servlet-class>Servlet.AccessServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>access</servlet-name>
+    <url-pattern>/Access</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>search</servlet-name>
+    <servlet-class>Servlet.SearchServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>access</servlet-name>
+    <servlet-name>search</servlet-name>
     <url-pattern>/Search</url-pattern>
   </servlet-mapping>
   
    <servlet>
     <servlet-name>entry</servlet-name>
-    <servlet-class>Search.RegisterServlet</servlet-class>
+    <servlet-class>Servlet.EntryServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -32,7 +42,7 @@
   
   <servlet>
     <servlet-name>end</servlet-name>
-    <servlet-class>Search.EndServlet</servlet-class>
+    <servlet-class>Servlet.EndServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>

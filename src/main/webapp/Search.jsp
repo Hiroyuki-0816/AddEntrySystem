@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/style.css">
+<!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
 <script src='AddEntry_JS.js'></script>
 <title>住所登録システム_検索画面</title>
 </head>

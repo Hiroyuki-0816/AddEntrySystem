@@ -9,7 +9,7 @@
 <body>
 <h1>住所登録システム</h1>
 
-<form method="post" action="/AddEntrySystem/Search">
+<form method="post" action="/Search">
 <input type="submit" value="アクセス">
 </form>
 

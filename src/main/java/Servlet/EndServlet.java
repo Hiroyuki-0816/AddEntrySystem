@@ -1,4 +1,4 @@
-package Search;
+package Servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class EndServlet
  */
-@WebServlet("/AddEntry/End")
+@WebServlet("/End")
 public class EndServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

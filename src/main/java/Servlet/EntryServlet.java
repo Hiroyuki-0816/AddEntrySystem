@@ -1,4 +1,4 @@
-package Search;
+package Servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -12,8 +12,8 @@ import job.*;
 /**
  * Servlet implementation class RegisterServlet
  */
-@WebServlet("/AddEntrySystem/Entry")
-public class RegisterServlet extends HttpServlet {
+@WebServlet("/Entry")
+public class EntryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
